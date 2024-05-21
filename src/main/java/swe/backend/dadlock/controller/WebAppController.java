@@ -22,7 +22,6 @@ public class WebAppController {
 
     private final WebAppService webAppService;
 
-
     @GetMapping
     public ApiResponse<List<WebAppResponseDTO.CommonDTO>> getWebAppUrlList(@AuthenticationPrincipal CustomOAuth2User user) {
         List<WebAppResponseDTO.CommonDTO> webAppUrlList = webAppService.getUrlList(user.getGoogleId());
